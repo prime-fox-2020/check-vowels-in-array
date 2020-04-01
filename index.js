@@ -32,10 +32,10 @@ function getVowel(row, column) {
 	}
 //membuat array yang diatas menjadi pengelompokkan arr 2X2
 	for (var j = 0; j < arr.length; j++) {
-		if (kotak[kotak.length - 1].length === column) {
+		if (kotak[kotak.length - 1].length === 4) {
 			break;
 		}
-		if (kotak[angka].length === column) {
+		if (kotak[angka].length === 4) {
 			angka++;
 			j--;
 		}
@@ -68,7 +68,7 @@ function getVowel(row, column) {
 				}
 			}
 		}
-		if (temp === column) {
+		if (temp === 4) {
 			hasil++;
 		}
 	}
