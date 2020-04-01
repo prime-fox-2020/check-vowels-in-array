@@ -1,6 +1,6 @@
 
-// function vowelsInMatrix(mtx){ 
-function vowelsInMatrix(baris, kolom){ 
+// const vowelsInMatrix = (mtx) => {
+const vowelsInMatrix = (baris, kolom) => { 
     let alph = 'AAAABCDEEEEFGHIIIIJKLMNOOOOPQRSTUUUUVWXYZ'
     let vokal = 'AIUEO'
     let countMtx = 0
@@ -16,12 +16,12 @@ function vowelsInMatrix(baris, kolom){
     for (let i = 0; i < mtx.length-1; i++) {
         for (let k = 0; k < mtx[i].length-1; k++) {
             let cek = 0
-            let kombinasi = [mtx[i][k], mtx[i][k+1], mtx[i+1][k], mtx[i+1][k+1]]
+            let kombinasi = [mtx[i][k], mtx[i][k+1], mtx[i+1][k], mtx[i+1][k+1]]//mtx2*2
             for (let m = 0; m < kombinasi.length; m++) {
                 if (vokal.includes(kombinasi[m].toUpperCase())) cek++;
             }   if (cek === kombinasi.length) countMtx++;
         }        
-    }   return countMtx
+    }   return `${countMtx} matrix 2x2 full of vocal alphabets`
 }
 console.log(vowelsInMatrix(5,3));
 // var fake = [
