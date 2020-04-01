@@ -25,4 +25,32 @@ function randomAlphabet() {
     return char;
 }
 
-console.log(generateBoard(4 + Math.round(Math.random() * 2), 4 + Math.round(Math.random() * 2)));
+function squareVowels(row, column) {
+    const board = generateBoard(row, column);
+    let count = 0;
+    console.log(board);
+    for (let down = 0; down < row - 1; down++) {
+        for (let right = 0; right < column - 1; right++) {
+            let cell0 = checkVowels(board[down][right]);
+            let cell1 = checkVowels(board[down][right + 1]);
+            let cell2 = checkVowels(board[down + 1][right]);
+            let cell3 = checkVowels(board[down + 1][right + 1]);
+            if (cell0 && cell1 && cell2 && cell3) {
+                count++;
+            }
+        }
+    }
+    return `Number of vowel block: ${count}`;
+}
+
+function checkVowels(char) {
+    const vowels = ['A', 'E', 'I', 'O', 'U'];
+    for (let i = 0; i < 4; i++) {
+        if (char == vowels[i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log(squareVowels(3 + Math.round(Math.random() * 5), 3 + Math.round(Math.random() * 3)));
