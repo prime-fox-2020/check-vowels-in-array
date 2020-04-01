@@ -1,5 +1,6 @@
-function generateAlphabet(row, col) {
+//RELEASE 0
 
+function generateAlphabet(row, col) {
     const kamus = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     let hasil = []
     for (let i = 0; i < row; i++) {
@@ -16,6 +17,8 @@ function generateAlphabet(row, col) {
 
 // console.log(generateAlphabet(5, 5));
 
+
+//RELEASE 1
 function checkSquere(I, J, arr) {
     let vocals = ['A', 'I', 'U', 'E', 'O']
     let check = true
@@ -43,7 +46,7 @@ function checkVocal(arr) {
 
     console.log('Total Vowels: ', count);
     console.table(arr);
-    return count
+    return ''
 }
 
 
