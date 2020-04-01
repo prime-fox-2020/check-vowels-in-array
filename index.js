@@ -1,5 +1,5 @@
 const createBoard = (rows, cols) => {
-  const dictionary = ['A', 'X', 'C', 'Y', 'E', 'O', 'O', 'S', 'I', 'U', 'I', 'N', 'M', 'Y', 'O', 'E', 'P', 'D', 'A', 'I'];
+  const dictionary = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const vowels = {
     A: true,
     I: true,
@@ -9,14 +9,14 @@ const createBoard = (rows, cols) => {
   };
 
   let board = [],
-      index = 0,
+      index,
       total = 0;
   
   for (let i = 0; i < rows; i++) {
     let temp = [];
     for (let j = 0; j < cols; j++) {
+      index = Math.floor(Math.random() * 26);
       temp.push(dictionary[index]);
-      index++;
     }
     board.push(temp);
   }
@@ -30,6 +30,4 @@ const createBoard = (rows, cols) => {
   return total;
 }
 
-
-
-console.log(createBoard(5,4));
+console.log(createBoard(5, 4));
