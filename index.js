@@ -3,8 +3,8 @@ function checkVowels(numberOfRows, numberOfColumns){
         return 'Please input >= 2'
     }
 
-    let vowelsDict = ['A','I','U','E','O']
-    let consonantsDict = ['B','C','D','F','G','H','J','K','L','M','N','P','Q','R','S','T','V','W','X','Y','Z']
+    const vowelsDict = ['A','I','U','E','O']
+    const consonantsDict = ['B','C','D','F','G','H','J','K','L','M','N','P','Q','R','S','T','V','W','X','Y','Z']
 
     let box = []
 
